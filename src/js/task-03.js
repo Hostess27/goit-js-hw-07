@@ -13,16 +13,11 @@ const images = [
     },
 ];
 
-// const galleryItem = document.getElementById("gallery");
+const galleryItem = document.getElementById("gallery");
 
-// let htmlString = "";
+const htmlString = images.reduce((acc, photo) => {
+    console.log(acc);
+    return acc + `<li><img src=${photo.url} alt=${photo.alt} /></li>`;
+}, "");
 
-// const gallery = images.forEach((photo) => {
-//     htmlString = htmlString + `<li><img ${images} /></li>`;
-// });
-
-// galleryItem.insertAdjacentHTML("afterbegin", htmlString);
-
-// console.log(gallery);
-// console.log(htmlString);
-
+galleryItem.insertAdjacentHTML("afterbegin", htmlString);
