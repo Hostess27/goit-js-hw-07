@@ -1,9 +1,12 @@
-const allCategories = document.getElementById(categories);
+const allCategories = document.querySelector("#categories");
+console.log(`В списке ${allCategories.children.length} категории`);
 
-categories.forEach(categori => {
+const subCategory = document.querySelectorAll(".item");
 
-  
+subCategory.forEach((elem) => {
+    const h2 = elem.querySelector("h2");
+    const ul = elem.querySelector("ul");
+    console.log(`Категория: ${h2.textContent}`);
+    console.log(`Количество элементов: ${ul.children.length}`);
 });
 
-
-console.log(categories)
