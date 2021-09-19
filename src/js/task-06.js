@@ -6,7 +6,7 @@ const invalidClassName = "invalid";
 const inputValidLength = Number(refs.inputField.dataset.length);
 
 refs.inputField.addEventListener("blur", (event) => {
-    if (event.target.value.length >= inputValidLength) {
+    if (event.target.value.length === inputValidLength) {
         refs.inputField.classList.remove(invalidClassName);
         refs.inputField.classList.add(validClassName);
     } else {
