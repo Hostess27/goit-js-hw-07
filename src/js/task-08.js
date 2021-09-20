@@ -1,10 +1,10 @@
-const InputValue = () => (amountDiv = inputEl.value | 0);
+const inputValue = () => (amountDiv = inputEl.value | 0);
 
 const createBoxes = (amount) => {
     const sizeDiv = 30;
     const delta = 10;
-    const divBoxes = new Array(amount).fill(0).map((elem, index) => {
-        elem = document.createElement("div");
+    const divBoxes = new Array(amount).fill(0).map((_, index) => {
+        const elem = document.createElement("div");
         elem.style.backgroundColor = `#${Math.random()
             .toString(16)
             .slice(3, 9)}`;
@@ -23,7 +23,7 @@ const divBoxesEl = document.querySelector("#boxes");
 const inputEl = document.querySelector("input[type = 'number']");
 
 let amountDiv = 0;
-inputEl.addEventListener("blur", InputValue.bind(inputEl));
+inputEl.addEventListener("blur", inputValue.bind(inputEl));
 
 const boxPlus = document.querySelector('button[data-action="render"]');
 const boxMinus = document.querySelector('button[data-action="destroy"]');
