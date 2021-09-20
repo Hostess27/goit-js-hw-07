@@ -17,7 +17,7 @@ const galleryItem = document.getElementById("gallery");
 
 const htmlString = images.reduce((acc, photo) => {
     console.log(acc);
-    return acc + `<li><img src=${photo.url} alt=${photo.alt} /></li>`;
+    return acc + `<li><img src=${photo.url} alt=${photo.alt} width = "600" height = "400"/></li>`;
 }, "");
 
 galleryItem.insertAdjacentHTML("afterbegin", htmlString);
